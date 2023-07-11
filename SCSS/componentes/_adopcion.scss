@@ -1,0 +1,73 @@
+#main_adopcion{
+    section{
+        h1{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    #section_adopcion{
+        @extend %column;
+        @include js-agn-flex(center, center);
+        width: 100%;
+        margin: 0px;
+        .div_adopcion{
+            @include bg-color($naranja);
+            @include bd-bottom($bd-size, $naranja-fuerte, $bd-type);
+            @include bd-top($bd-size, $naranja-fuerte, $bd-type);
+            width: 100%;
+            display: grid;
+            grid-template-columns: 20% 30% 30% 20%;
+            grid-template-rows: 100%;
+            grid-template-areas: 
+            "img texto contacto mapa ";
+            justify-items: center;
+            align-items: center;
+            .texto_adopcion{
+                text-align: justify;
+                grid-area: texto;
+            }
+            .texto_contacto{
+                text-align: right;
+                grid-area: contacto;
+            }
+            .img-adopcion-grid{
+                grid-area: img;
+                align-self: start;
+                height: 100%;
+                width: 100%;
+            }
+            iframe{
+                width: 250px;
+                height: 250px;
+                position: relative;
+                grid-area: mapa;
+                align-self: self-end;
+            }
+            @media (max-width: 992px){
+                grid-template-columns: 100%;
+                grid-template-rows: 0.3fr 0.8fr 500px 0.2fr;
+                grid-template-areas: 
+                "texto"
+                "img"
+                "mapa"
+                "contacto";
+                margin-bottom: 50px;
+                :nth-of-type(1) ,:nth-of-type(2){
+                    @include column;
+                    @include js-agn-flex(center, center);
+                }
+                iframe{
+                    width: 500px;
+                    height: 500px;
+                }
+                .img-adopcion-grid{
+                    width: 100%;
+                    height: fit-content;
+                    margin-top: 20%;
+                    margin-bottom: 20%;
+                    @include self-center
+                }
+            }
+        }
+    }
+}

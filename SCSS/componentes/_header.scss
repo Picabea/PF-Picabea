@@ -1,0 +1,121 @@
+header{
+    @include bg-color(map-get($header, color-header-bg));
+    @include bd-bottom($bd-size, map-get($header, color-header-border), $bd-type);
+    @include bd-top($bd-size, map-get($header, color-header-border), $bd-type);
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    display: flex;
+    top: 0;
+    z-index: 1;
+
+    #collapseExample{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        a, button{
+            width: 100%;
+        }
+        ul{
+            margin: 0px;
+            padding: 0px;;
+            @extend %column;
+            @include js-agn-flex(start, center);
+            li{
+                width: 20%;
+                display: flex;
+                @include js-agn-flex(center, start);
+                margin-top: map-get($header, margin-li-button);
+                margin-bottom: map-get($header, margin-li-button);
+            }
+        }
+    }
+    #div--header--celular{
+        display: none;
+        h1{
+            display: none;
+        }
+        .p-collapse-mine{
+            margin: 0px;
+        }
+    }
+    ul{
+        li{
+            margin: 0px;
+            list-style-type: none;
+            display: inline-block;
+            a{
+                button{
+                    margin: 0px;
+                    padding: map-get($header, padding-ul-button);
+                    color: white;
+                    border: 0;
+                    @include bg-color(map-get($header, color-button));
+                }
+            }
+        }
+    }
+    button:hover{
+        @include bg-color(map-get($header, color-button-h));
+        transform: scale(1.1);
+        transition: all 0.5s linear;
+    }
+    nav{
+        display: flex;
+        @include js-agn-flex(end, end);
+        width: 100%;
+        ul{
+            display: grid;
+            grid-template-columns: 40% 40% 20%;
+            grid-template-rows: 100%;
+            grid-template-areas: "nav blanco acercaDe";
+            width: 100%;
+            @extend %self-center;
+            padding-top: map-get($header, padding-ul-button);
+            padding-bottom: map-get($header, padding-ul-button);
+            margin: 0px;
+            .grid-nav{
+                display: flex;
+                @include js-agn-flex(start, center);
+                width: 100%;
+            }
+            .espacio_blanco{
+                grid-area: blanco;
+            }
+            .acercaDe{
+                grid-area: acercaDe;
+                align-self: center;
+                justify-self: end;
+            }
+            li{
+                margin-left: map-get($header, margin-li-button);
+                margin-right: map-get($header, margin-li-button);
+            }
+        }
+    }
+    @media (max-width: 992px){
+        display: flex;
+        nav{
+            display: none;
+        }
+        .card-body-mine{
+            background-color: map-get($header , color-header-bg) !important;
+        }
+        #div--header--celular{
+            width: 100%;
+            display: flex;
+            @include js-agn-flex(space-between, center);
+            h1{
+                display: inline;
+            }
+            a{
+                width: 50px;
+                height: 50px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

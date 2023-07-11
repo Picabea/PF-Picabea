@@ -1,0 +1,8 @@
+// Los incluyo desde un mixin para poder usarlos en media queries
+%column{
+    @include column
+}
+
+%self-center{
+    @include self-center
+}

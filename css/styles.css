@@ -1,0 +1,467 @@
+#main_adopcion #section_adopcion, #main_au #div--segundoAU #div--iframe, #main_au #div--segundoAU #div_contacto, #main_au div :nth-child(1), #main_au :nth-child(2) div, #main_index #section_index #div-mascotas div:nth-child(5), #main_index #section_index #div-mascotas div:nth-child(2), header #collapseExample ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#main_index #section_index #div-mascotas h2, header nav ul {
+  align-self: center;
+  justify-self: center;
+}
+
+header {
+  background-color: rgb(255, 212, 196);
+  border-bottom: 3px orange solid;
+  border-top: 3px orange solid;
+  width: 100%;
+  margin: 0;
+  position: sticky;
+  display: flex;
+  top: 0;
+  z-index: 1;
+}
+header #collapseExample {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+header #collapseExample a, header #collapseExample button {
+  width: 100%;
+}
+header #collapseExample ul {
+  margin: 0px;
+  padding: 0px;
+  justify-content: start;
+  align-items: center;
+}
+header #collapseExample ul li {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+header #div--header--celular {
+  display: none;
+}
+header #div--header--celular h1 {
+  display: none;
+}
+header #div--header--celular .p-collapse-mine {
+  margin: 0px;
+}
+header ul li {
+  margin: 0px;
+  list-style-type: none;
+  display: inline-block;
+}
+header ul li a button {
+  margin: 0px;
+  padding: 5px;
+  color: white;
+  border: 0;
+  background-color: rgb(255, 145, 0);
+}
+header button:hover {
+  background-color: rgb(255, 94, 0);
+  transform: scale(1.1);
+  transition: all 0.5s linear;
+}
+header nav {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+}
+header nav ul {
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  grid-template-rows: 100%;
+  grid-template-areas: "nav blanco acercaDe";
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 0px;
+}
+header nav ul .grid-nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+header nav ul .espacio_blanco {
+  grid-area: blanco;
+}
+header nav ul .acercaDe {
+  grid-area: acercaDe;
+  align-self: center;
+  justify-self: end;
+}
+header nav ul li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media (max-width: 992px) {
+  header {
+    display: flex;
+  }
+  header nav {
+    display: none;
+  }
+  header .card-body-mine {
+    background-color: rgb(255, 212, 196) !important;
+  }
+  header #div--header--celular {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #div--header--celular h1 {
+    display: inline;
+  }
+  header #div--header--celular a {
+    width: 50px;
+    height: 50px;
+  }
+  header #div--header--celular a img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+footer {
+  background-color: lightblue;
+  border-top: 3px rgb(66, 110, 207) solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+footer div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+footer div:nth-child(2) {
+  justify-content: end;
+  align-items: center;
+}
+footer div:nth-child(2) img:nth-child(2) {
+  display: none;
+}
+@media (max-width: 992px) {
+  footer div:nth-child(2) i {
+    display: none;
+  }
+  footer div:nth-child(2) img:nth-child(2) {
+    display: inline;
+  }
+}
+footer img {
+  height: 50px;
+  width: 50px;
+}
+
+#main_index .bg-index {
+  background-image: url("../images/perroygato.jpg");
+  background-size: cover;
+}
+#main_index #section_index {
+  background-color: rgb(101, 189, 167);
+  border-top: 3px rgb(29, 117, 95) solid;
+}
+#main_index #section_index div:nth-child(1) {
+  margin-bottom: 5%;
+}
+#main_index #section_index b {
+  width: 300px;
+}
+#main_index #section_index #div-mascotas {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "titulo titulo titulo titulo" "gato parrafo-gato parrafo-perro perro";
+}
+#main_index #section_index #div-mascotas #parrafo-adaptacion {
+  display: none;
+}
+#main_index #section_index #div-mascotas .imagenes--mascotas {
+  width: 70%;
+}
+#main_index #section_index #div-mascotas .parrafo--mascotas {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+#main_index #section_index #div-mascotas h2 {
+  grid-area: titulo;
+}
+#main_index #section_index #div-mascotas b {
+  font-family: "Poppins", "sans-serif";
+  font-weight: 700;
+  font-size: 150%;
+  text-align: center;
+}
+#main_index #section_index #div-mascotas div:nth-child(2) {
+  grid-area: gato;
+  justify-content: space-between;
+  align-items: center;
+}
+#main_index #section_index #div-mascotas p:nth-child(3) {
+  grid-area: parrafo-gato;
+}
+#main_index #section_index #div-mascotas p:nth-child(4) {
+  grid-area: parrafo-perro;
+}
+#main_index #section_index #div-mascotas div:nth-child(5) {
+  grid-area: perro;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 992px) {
+  #main_index #section_index h2 {
+    text-align: center;
+  }
+  #main_index #section_index #div-mascotas {
+    grid-template-columns: 100%;
+    grid-template-rows: 0.3fr 1fr 0.1fr 1fr 0.1fr;
+    grid-template-areas: "titulo" "gato" "parrafo-gato" "perro" "parrafo-perro-adaptacion";
+  }
+  #main_index #section_index #div-mascotas #parrafo-adaptacion {
+    display: block;
+    grid-area: parrafo-perro-adaptacion;
+    text-align: center;
+  }
+  #main_index #section_index #div-mascotas #parrafo-perro {
+    display: none;
+  }
+  #main_index #section_index #div-mascotas div:nth-child(5) {
+    justify-content: end;
+    align-items: center;
+  }
+}
+
+#section_perros {
+  background-color: rgb(189, 138, 91);
+  border-top: 3px rgb(173, 111, 53) solid;
+}
+
+.bg-perros {
+  background-image: url("../images/husky_corre.jpg");
+  background-size: cover;
+}
+
+#section_gatos {
+  background-color: rgb(101, 189, 167);
+  border-top: 3px rgb(29, 117, 95) solid;
+}
+
+.bg-gatos {
+  background-image: url("../images/gatobg.jpeg");
+  background-size: cover;
+}
+
+#section_perros .texto_centrado, #section_gatos .texto_centrado {
+  width: 100%;
+  text-align: center;
+}
+#section_perros .nombre_animales, #section_gatos .nombre_animales {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+#section_perros .nombre_animales_mobile, #section_gatos .nombre_animales_mobile {
+  display: none;
+}
+#section_perros .section_perros_gatos, #section_gatos .section_perros_gatos {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+@media (max-width: 992px) {
+  #section_perros .nombre_animales, #section_gatos .nombre_animales {
+    display: none;
+  }
+  #section_perros .nombre_animales_mobile, #section_gatos .nombre_animales_mobile {
+    display: block;
+    padding-bottom: 10px;
+  }
+  #section_perros .section_perros_gatos, #section_gatos .section_perros_gatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}
+
+#main_au :nth-child(2) div {
+  justify-content: start;
+  align-items: start;
+}
+#main_au :nth-child(2) div h2 {
+  align-self: center;
+}
+#main_au div {
+  display: flex;
+}
+#main_au div img {
+  width: 20%;
+}
+#main_au div #nombre--mobile {
+  display: none;
+}
+#main_au div :nth-child(1) {
+  justify-content: start;
+  align-items: center;
+}
+#main_au #div--segundoAU {
+  justify-content: space-between;
+  height: 400px;
+}
+#main_au #div--segundoAU #div_contacto {
+  justify-content: space-around;
+  align-items: center;
+}
+#main_au #div--segundoAU #div--iframe {
+  width: 50%;
+  height: 100%;
+}
+#main_au #div--segundoAU #div--iframe iframe {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  #main_au :nth-child(2), #main_au :nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  #main_au img {
+    width: 384px !important;
+    height: 512px;
+  }
+}
+
+#main_adopcion section h1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#main_adopcion #section_adopcion {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0px;
+}
+#main_adopcion #section_adopcion .div_adopcion {
+  background-color: orange;
+  border-bottom: 3px rgb(255, 94, 0) solid;
+  border-top: 3px rgb(255, 94, 0) solid;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 30% 30% 20%;
+  grid-template-rows: 100%;
+  grid-template-areas: "img texto contacto mapa ";
+  justify-items: center;
+  align-items: center;
+}
+#main_adopcion #section_adopcion .div_adopcion .texto_adopcion {
+  text-align: justify;
+  grid-area: texto;
+}
+#main_adopcion #section_adopcion .div_adopcion .texto_contacto {
+  text-align: right;
+  grid-area: contacto;
+}
+#main_adopcion #section_adopcion .div_adopcion .img-adopcion-grid {
+  grid-area: img;
+  align-self: start;
+  height: 100%;
+  width: 100%;
+}
+#main_adopcion #section_adopcion .div_adopcion iframe {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  grid-area: mapa;
+  align-self: self-end;
+}
+@media (max-width: 992px) {
+  #main_adopcion #section_adopcion .div_adopcion {
+    grid-template-columns: 100%;
+    grid-template-rows: 0.3fr 0.8fr 500px 0.2fr;
+    grid-template-areas: "texto" "img" "mapa" "contacto";
+    margin-bottom: 50px;
+  }
+  #main_adopcion #section_adopcion .div_adopcion :nth-of-type(1), #main_adopcion #section_adopcion .div_adopcion :nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #main_adopcion #section_adopcion .div_adopcion iframe {
+    width: 500px;
+    height: 500px;
+  }
+  #main_adopcion #section_adopcion .div_adopcion .img-adopcion-grid {
+    width: 100%;
+    height: fit-content;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+* {
+  font-family: "robotto", sans-serif;
+}
+
+.titulos {
+  font-size: 200%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body main {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10%;
+}
+body main .bg-index :nth-child(1), body main .bg-perros :nth-child(1), body main .bg-gatos :nth-child(1) {
+  background: rgb(250, 255, 252);
+  background: radial-gradient(circle, rgba(250, 255, 252, 0.8463760504) 31%, rgba(9, 9, 121, 0) 100%);
+}
+body main .padding_div {
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+body main section {
+  position: sticky;
+  height: 100%;
+}
+body main h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 400%;
+  margin: 0;
+  padding: 0;
+  animation: h1-entrar-pag 1s;
+}
+body main h2 {
+  font-family: "robotto", sans-serif;
+}
+
+@keyframes h1-entrar-pag {
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,62 @@
+@import './base/vars';
+@import './base/maps';
+@import './base/mixin';
+@import './base/extend';
+
+@import './componentes/header';
+@import './componentes/footer';
+@import './componentes/index';
+@import './componentes/gatos-perros';
+@import './componentes/au';
+@import './componentes/adopcion';
+
+*{
+    font-family: 'robotto', sans-serif;
+}
+.titulos{
+    font-size: 200%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    main{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10%;
+        .bg-index, .bg-perros, .bg-gatos{
+            :nth-child(1){
+                background: rgb(250,255,252);
+                background: radial-gradient(circle, rgba(250,255,252,0.8463760504201681) 31%, rgba(9,9,121,0) 100%);
+            }
+        }
+        .padding_div{
+            padding-top: 300px;
+            padding-bottom: 300px;
+        }
+        section{
+            position: sticky;
+            height: 100%;
+            
+        }
+        h1{
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            font-size: 400%;
+            margin: 0;
+            padding: 0;    
+            animation: h1-entrar-pag 1s;    
+        }
+        h2{
+            font-family: 'robotto', sans-serif;
+        }
+    }
+}
+
+@keyframes h1-entrar-pag{
+    50%{
+        transform: scale(1.5)
+    }
+    100%{
+        transform: scale(1);
+    }
+}

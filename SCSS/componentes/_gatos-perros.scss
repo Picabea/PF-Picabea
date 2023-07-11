@@ -1,0 +1,48 @@
+#section_perros{
+    @include bg-color($perros-bg-color);
+    @include bd-top($bd-size, $perros-bd-color, $bd-type);
+    
+}
+.bg-perros{
+        @include bg-image('../images/husky_corre.jpg')
+    }    
+
+#section_gatos{
+    @include bg-color($gatos-bg-color);
+    @include bd-top($bd-size, $gatos-bd-color, $bd-type);
+}
+.bg-gatos{
+    @include bg-image('../images/gatobg.jpeg')
+}
+
+#section_perros, #section_gatos{
+    .texto_centrado{
+        width: 100%;
+        text-align: center;
+    }
+    .nombre_animales{
+        display: inline-block;
+        width: 33%;
+        text-align: center;
+    }
+    .nombre_animales_mobile{
+        display: none;
+    }
+    .section_perros_gatos{
+        display: flex;
+        @include js-agn-flex(space-around, start)
+    }
+    @media (max-width: 992px){
+        .nombre_animales{
+            display: none;
+        }
+        .nombre_animales_mobile{
+            display: block;
+            padding-bottom:10px ;
+        }
+        .section_perros_gatos{
+            @include column;
+            @include js-agn-flex(start, center)
+        }
+    }
+}

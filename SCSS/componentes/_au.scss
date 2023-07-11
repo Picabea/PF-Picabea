@@ -1,0 +1,53 @@
+#main_au{
+    :nth-child(2){
+        div{
+            @extend %column;
+            @include js-agn-flex(start, start);
+            h2{
+                align-self: center;
+            }
+        }
+    }
+    div{
+        display: flex;
+        img{
+            width:20%
+        }
+        #nombre--mobile{
+            display: none;
+        }
+        :nth-child(1){
+            @extend %column;
+            @include js-agn-flex(start, center)
+        }
+        
+    }
+    #div--segundoAU{
+        justify-content: space-between;
+        height: 400px;
+        #div_contacto{
+            @extend %column;
+            @include js-agn-flex(space-around, center)
+        }
+        #div--iframe{
+            width: 50%;
+            @extend %column;
+            height: 100%;
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+    }
+    @media (max-width: 992px) {
+        :nth-child(2), :nth-child(3){
+            @include column;
+            @include js-agn-flex(start, center)
+        }
+        img{
+            width: 384px !important;
+            height: 512px;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+#main_index{
+    .bg-index{
+        @include bg-image('../images/perroygato.jpg')
+    }
+    #section_index{
+        @include bg-color($gatos-bg-color);
+        @include bd-top($bd-size, $gatos-bd-color, $bd-type);
+
+        div:nth-child(1){
+            margin-bottom: 5%;
+        }
+        b{
+            width: 300px;
+        }
+        #div-mascotas{
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 20% 80%;
+            grid-template-areas: 
+            "titulo titulo titulo titulo"
+            "gato parrafo-gato parrafo-perro perro";
+            #parrafo-adaptacion{
+                display: none;
+            }
+            .imagenes--mascotas{
+                width: 70%;
+            }
+            .parrafo--mascotas{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 300;
+                text-align: center;
+            }
+            h2{
+                grid-area: titulo;
+                @extend %self-center;
+            }
+            b{
+                font-family: 'Poppins', 'sans-serif';
+                font-weight: 700;
+                font-size: 150%;
+                text-align:center;
+            }
+            div:nth-child(2){
+                grid-area: gato;
+                @extend %column;
+                @include js-agn-flex(space-between, center);
+            }
+            p:nth-child(3){
+                grid-area: parrafo-gato;
+            }
+            p:nth-child(4){
+                grid-area: parrafo-perro;
+            }
+            div:nth-child(5){
+                grid-area: perro;
+                @extend %column;
+                @include js-agn-flex(space-between, center);
+            }
+        }
+    }
+    @media (max-width: 992px){
+        #section_index{
+            h2{
+                text-align: center;
+            }
+            #div-mascotas{
+                grid-template-columns: 100%;
+                grid-template-rows: 0.3fr 1fr 0.1fr 1fr 0.1fr;
+                grid-template-areas: 
+                "titulo"
+                "gato"
+                "parrafo-gato"
+                "perro"
+                "parrafo-perro-adaptacion";
+                #parrafo-adaptacion{
+                    display: block;
+                    grid-area: parrafo-perro-adaptacion;
+                    text-align: center;
+                }
+                #parrafo-perro{
+                    display: none;
+                }
+                div:nth-child(5){
+                    @include js-agn-flex (end, center)
+                }
+            }
+        }
+    }
+}

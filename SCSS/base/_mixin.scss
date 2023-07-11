@@ -1,0 +1,29 @@
+@mixin bg-image($img){
+    background-image: url($img);
+    background-size: cover;
+}
+
+@mixin bd-top($size, $bd-color, $type){
+    border-top: $size $bd-color $bd-type;
+}
+@mixin bd-bottom($size, $bd-color, $type){
+    border-bottom: $size $bd-color $bd-type;
+}
+
+@mixin bg-color($color-bg){
+    background-color: $color-bg;
+}
+
+@mixin column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin js-agn-flex($js-cnt, $agn-items){
+    justify-content: $js-cnt;
+    align-items: $agn-items;
+}
+
+@mixin self-center{
+    align-self: center;
+    justify-self: center;
+}
