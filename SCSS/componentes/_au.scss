@@ -27,7 +27,7 @@
         height: 400px;
         #div_contacto{
             @extend %column;
-            @include js-agn-flex(space-around, center)
+            @include js-agn-flex(space-around, center);
         }
         #div--iframe{
             width: 50%;
@@ -45,9 +45,21 @@
             @include column;
             @include js-agn-flex(start, center)
         }
+        #div--segundoAU{
+            height: 150%;
+            #div_contacto{
+                
+                div{
+                    b, p{
+                        align-self: center;
+                    }
+                }
+            }
+        }
+        
         img{
-            width: 384px !important;
-            height: 512px;
+            width: 320px !important;
+            height: 426px;
         }
     }
 }

@@ -23,6 +23,7 @@ header #collapseExample {
   position: absolute;
   top: 100%;
   width: 100%;
+  transition: all 1s ease;
 }
 header #collapseExample a, header #collapseExample button {
   width: 100%;
@@ -147,14 +148,14 @@ footer div:nth-child(2) {
   justify-content: end;
   align-items: center;
 }
-footer div:nth-child(2) img:nth-child(2) {
+footer div:nth-child(2) a {
   display: none;
 }
 @media (max-width: 992px) {
   footer div:nth-child(2) i {
     display: none;
   }
-  footer div:nth-child(2) img:nth-child(2) {
+  footer div:nth-child(2) a {
     display: inline;
   }
 }
@@ -338,9 +339,15 @@ footer img {
     justify-content: start;
     align-items: center;
   }
+  #main_au #div--segundoAU {
+    height: 150%;
+  }
+  #main_au #div--segundoAU #div_contacto div b, #main_au #div--segundoAU #div_contacto div p {
+    align-self: center;
+  }
   #main_au img {
-    width: 384px !important;
-    height: 512px;
+    width: 320px !important;
+    height: 426px;
   }
 }
 
@@ -385,7 +392,6 @@ footer img {
   height: 250px;
   position: relative;
   grid-area: mapa;
-  align-self: self-end;
 }
 @media (max-width: 992px) {
   #main_adopcion #section_adopcion .div_adopcion {
@@ -401,8 +407,8 @@ footer img {
     align-items: center;
   }
   #main_adopcion #section_adopcion .div_adopcion iframe {
-    width: 500px;
-    height: 500px;
+    width: 90%;
+    height: 90%;
   }
   #main_adopcion #section_adopcion .div_adopcion .img-adopcion-grid {
     width: 100%;
@@ -423,8 +429,10 @@ footer img {
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: wrap;
 }
 body main {
   width: 100%;
@@ -453,6 +461,11 @@ body main h1 {
 }
 body main h2 {
   font-family: "robotto", sans-serif;
+}
+@media (max-width: 992px) {
+  body main h1 {
+    font-size: 300%;
+  }
 }
 
 @keyframes h1-entrar-pag {
