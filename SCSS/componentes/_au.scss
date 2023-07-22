@@ -24,10 +24,34 @@
     }
     #div--segundoAU{
         justify-content: space-between;
-        height: 400px;
+        height: 500px;
         #div_contacto{
             @extend %column;
             @include js-agn-flex(space-around, center);
+            form{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                fieldset{
+                    margin-bottom: 10px;
+                    label{
+                        text-align: center;
+                        width: 100%;
+                        font-weight: bold;
+                        background-color: rgba($color: #3678ce, $alpha: 0.5);
+                    }
+                    input{
+                        background-color: rgba($color: #746c6c, $alpha: 0.2);
+                        border-top: none;
+                        
+                    }
+                    :nth-child(2){
+                        border-bottom: none;
+                    }
+                    :nth-child(4){
+                        height: 100px;
+                    }
+                }
+            }
         }
         #div--iframe{
             width: 50%;
